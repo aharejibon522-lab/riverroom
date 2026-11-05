@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RiverRoom — Texas Hold'em</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><div class="brand"><span class="mark">R</span><div><b>RiverRoom</b><small>Texas Hold'em · Play with friends</small></div></div><span class="chip">VIRTUAL CHIPS ONLY</span></header>
+<main>
+<section id="lobby" class="panel">
+  <div class="intro"><p class="eyebrow">YOUR TABLE IS WAITING</p><h1>Find your seat.</h1><p>Create a table for friends or join a public game.</p></div>
+  <div class="forms">
+    <label>Your nickname<input id="nickname" maxlength="18" placeholder="e.g. RiverAce"></label>
+    <label>Table name<input id="roomname" maxlength="28" placeholder="Friday Night Poker"></label>
+    <div class="actions"><button id="create">Create public table</button><button id="createPrivate" class="secondary">Create private table</button></div>
+    <div class="joinrow"><input id="roomid" placeholder="Room code"><input id="password" placeholder="Password (private)"><button id="join" class="secondary">Join</button></div>
+  </div>
+  <h2>Public tables</h2><div id="rooms" class="rooms">Loading tables…</div>
+</section>
+<section id="table" class="panel hidden">
+  <div class="tabletop"><div><p class="eyebrow">LIVE TABLE</p><h1 id="tableName">RiverRoom</h1><p>Room code: <b id="tableCode"></b></p></div><button id="leave" class="secondary">Back to lobby</button></div>
+  <div class="felt">
+    <div id="seats" class="seats"></div>
+    <div class="centerpot"><span>COMMUNITY CARDS</span><div id="board" class="cards"></div><b id="pot">Pot: 0</b></div>
+  </div>
+  <div id="mycards" class="mycards"><span>Your cards</span><div id="hole" class="cards"></div></div>
+  <div id="status" class="status">Waiting for another player…</div>
+  <div class="controls"><button data-action="fold" class="danger">Fold</button><button data-action="check">Check</button><button data-action="call">Call</button><input id="raiseAmount" type="number" min="20" value="40"><button data-action="raise">Raise to</button><button data-action="allin" class="secondary">All-in</button></div>
+  <p class="hint">A hand starts when at least two players are seated. Each player begins with 1,000 virtual chips.</p>
+</section>
+</main>
+<div id="toast" class="toast"></div>
+<script src="/socket.io/socket.io.js"></script><script src="/app.js"></script>
+</body></html>
