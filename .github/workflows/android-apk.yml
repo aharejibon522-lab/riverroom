@@ -1,4 +1,7 @@
 name: Build RiverRoom Android APK
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 on:
   workflow_dispatch:
   push:
