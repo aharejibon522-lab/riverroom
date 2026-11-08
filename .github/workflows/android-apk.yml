@@ -39,6 +39,9 @@ jobs:
       - name: Reinstall aligned dependencies
         working-directory: android-app
         run: npm install
+      - name: Diagnose Expo module metadata
+        working-directory: android-app
+        run: npx expo-modules-autolinking resolve --platform android
       - name: Generate Android project
         working-directory: android-app
         run: npx expo prebuild --platform android --clean --no-install
