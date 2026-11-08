@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "RiverRoom Poker",
+    "slug": "riverroom-poker",
+    "version": "1.0.0",
+    "orientation": "landscape",
+    "userInterfaceStyle": "dark",
+    "android": {
+      "package": "com.riverroom.poker",
+      "versionCode": 1,
+      "softwareKeyboardLayoutMode": "pan"
+    },
+    "ios": {
+      "supportsTablet": false
+    }
+  }
+}
