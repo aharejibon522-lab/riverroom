@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "BABA",
+    "slug": "baba-comedy-vault",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "android": {
+      "package": "com.aharejibon.baba",
+      "versionCode": 1,
+      "permissions": [
+        "RECORD_AUDIO",
+        "INTERNET"
+      ]
+    },
+    "plugins": []
+  }
+}
