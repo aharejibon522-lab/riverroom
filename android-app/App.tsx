@@ -3,7 +3,7 @@ import { ActivityIndicator, BackHandler, Platform, SafeAreaView, StatusBar, Styl
 import { WebView } from "react-native-webview";
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 
-const GAME_URL = "https://riverroom-zky5.onrender.com";
+const GAME_URL = "https://riverroom-live.onrender.com";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
