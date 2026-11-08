@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io("https://riverroom-live.onrender.com", { transports: ["websocket", "polling"], reconnection: true, reconnectionAttempts: Infinity, reconnectionDelay: 1500 });
 const $ = id => document.getElementById(id);
 let myId=null, currentRoom=null, myCards=[];
 function toast(msg){const t=$("toast");t.textContent=msg;t.style.display="block";setTimeout(()=>t.style.display="none",2600)}
