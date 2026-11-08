@@ -6,8 +6,9 @@ const crypto = require("crypto");
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server);
+const io = new Server(server, { cors: { origin: "*", methods: ["GET", "POST"] } });
 app.use(express.static("public"));
+app.get("/health", (_req, res) => res.json({ ok: true, service: "riverroom" }));
 
 const PORT = process.env.PORT || 3000;
 const STARTING_CHIPS = 1000;
