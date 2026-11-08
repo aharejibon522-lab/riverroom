@@ -7,7 +7,7 @@ const crypto = require("crypto");
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, { cors: { origin: "*", methods: ["GET", "POST"] } });
-app.use(express.static("public"));
+app.use(express.static(__dirname));
 app.get("/health", (_req, res) => res.json({ ok: true, service: "riverroom" }));
 
 const PORT = process.env.PORT || 3000;
