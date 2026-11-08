@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: baba-api
+    runtime: node
+    rootDir: baba/server
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: /var/data
+    disk:
+      name: baba-data
+      mountPath: /var/data
+      sizeGB: 1
